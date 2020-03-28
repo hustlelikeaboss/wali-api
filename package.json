@@ -1,0 +1,48 @@
+{
+	"name": "wali-api",
+	"version": "0.0.1",
+	"description": "graphql api served via aws lambda for wali-ui",
+	"author": {
+		"name": "David Q. Jin",
+		"email": "david.q.jin@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/hustlelikeaboss/wali-api.git"
+	},
+	"scripts": {
+		"deploy": "npm-run-all lint:js sls",
+		"jest": "jest --coverage",
+		"jest:u": "jest -u --coverage",
+		"lint:js": "eslint lib",
+		"lint:js:fix": "eslint lib --fix",
+		"sls": "sls deploy --verbose",
+		"test": "npm-run-all lint:js copy babel jest",
+		"test:u": "npm-run-all lint:js copy babel jest:u"
+	},
+	"dependencies": {
+		"aws-sdk": "^2.648.0",
+		"babel-runtime": "^6.26.0",
+		"graphql": "^14.6.0",
+		"graphql-server-lambda": "^1.4.1",
+		"graphql-tools": "^4.0.7",
+		"merge-graphql-schemas": "^1.7.6",
+		"uuid": "^7.0.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.9.0",
+		"@babel/preset-env": "^7.9.0",
+		"aws-sdk-mock": "^5.1.0",
+		"babel-loader": "^8.1.0",
+		"eslint": "^6.8.0",
+		"eslint-config-airbnb-base": "^14.1.0",
+		"eslint-plugin-import": "^2.20.1",
+		"imports-loader": "^0.8.0",
+		"jest-cli": "^25.2.3",
+		"lambda-tester": "^4.0.1",
+		"npm-run-all": "^4.1.5",
+		"serverless-webpack": "^5.3.1",
+		"webpack": "^4.42.1",
+		"webpack-node-externals": "^1.7.2"
+	}
+}

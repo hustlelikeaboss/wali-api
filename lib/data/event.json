@@ -1,0 +1,9 @@
+{
+	"httpMethod": "POST",
+	"headers": {
+		"Content-Type": "application/json"
+	},
+	"body": {
+		"query": "query allArtistsAndSongs {\n  artists {\n    id\n    first_name\n    last_name\n    songs {\n      id\n      title\n      duration\n    }\n  }\n}"
+	}
+}
