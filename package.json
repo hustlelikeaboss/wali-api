@@ -27,6 +27,8 @@
 		"graphql-server-lambda": "^1.4.1",
 		"graphql-tools": "^4.0.7",
 		"merge-graphql-schemas": "^1.7.6",
+		"moment": "^2.24.0",
+		"plaid": "^4.9.0",
 		"uuid": "^7.0.2"
 	},
 	"devDependencies": {
