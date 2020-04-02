@@ -5,7 +5,7 @@
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
 [![Build Status](https://travis-ci.org/boazdejong/serverless-graphql-api.svg?branch=master)](https://travis-ci.org/boazdejong/serverless-graphql-api)
 
-GraphQL Lambda Server using [graphql-server-lambda](https://github.com/apollographql/graphql-server/tree/master/packages/graphql-server-lambda) from [Apollo](http://dev.apollodata.com/).
+GraphQL Lambda Server using [graphql-server-lambda](https://github.com/apollographql/graphql-server/tree/master/packages/graphql-server-lambda) from [Apollo](http://dev.apollographql.com/).
 
 [graphql-tools](https://github.com/apollographql/graphql-tools) and [merge-graphql-schemas](https://github.com/okgrow/merge-graphql-schemas) are used to generate the schema.
 
@@ -49,10 +49,10 @@ npm run deploy --function graphql
 
 ```bash
 # invoke lambda function locally
-serverless invoke local --function graphql --path lib/data/event.json
+serverless invoke local --function graphql --path lib/event.json
 
 # invoke deployed lambda function directly
-serverless invoke --function graphql --path lib/data/event.json
+serverless invoke --function graphql --path lib/event.json
 
 # remove deployed stack
 serverless remove
@@ -88,11 +88,7 @@ Using the generated id from the artist you can create a song with the following 
 
 ```graphql
 mutation {
-	createSong(
-		artist: "99a746e0-0734-11e7-b2fd-45ae0a3b9074"
-		title: "Whatever"
-		duration: 120
-	) {
+	createSong(artist: "99a746e0-0734-11e7-b2fd-45ae0a3b9074", title: "Whatever", duration: 120) {
 		id
 	}
 }
@@ -102,11 +98,7 @@ mutation {
 
 ```graphql
 mutation {
-	updateArtist(
-		id: "99a746e0-0734-11e7-b2fd-45ae0a3b9074"
-		first_name: "John"
-		last_name: "Ruth"
-	) {
+	updateArtist(id: "99a746e0-0734-11e7-b2fd-45ae0a3b9074", first_name: "John", last_name: "Ruth") {
 		id
 		first_name
 		last_name
