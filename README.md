@@ -3,7 +3,7 @@
 # Serverless GraphQL API using Lambda and DynamoDB
 
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
-[![Build Status](https://github.com/hustlelikeaboss/wali-api/workflows/Node.js CI/badge.svg)](https://github.com/hustlelikeaboss/wali-api/actions)
+![workflow](https://github.com/hustlelikeaboss/wali-api/workflows/Node.js%20CI/badge.svg?branch=master)
 
 GraphQL Lambda Server using [apollo-server-lambda](https://github.com/apollographql/apollo-server/tree/master/packages/apollo-server-lambda) from [Apollo](http://dev.apollographql.com/).
 
