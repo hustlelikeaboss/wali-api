@@ -3,7 +3,5 @@
 	"headers": {
 		"Content-Type": "application/json"
 	},
-	"body": {
-		"query": "query {\n  users {\n    user_id\n } \n}"
-	}
+	"body": "{\"query\": \"query { users { user_id } }\"}" 
 }
