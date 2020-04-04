@@ -42,7 +42,7 @@ This will create the Lambda Function and API Gateway for GraphQL, together with 
 2. Run the script below to quickly upload code changes:
 
 ```
-npm run deploy --function graphql
+serverless deploy function -f graphql
 ```
 
 [Other useful scripts](https://serverless.com/framework/docs/providers/aws/):

@@ -24,7 +24,7 @@ export function getUserById(user_id: string) {
 	return db.get(params);
 }
 
-export function createUser(args: wali.User) {
+export function upsertUser(args: wali.User) {
 	const { user_id, email, last_login_at } = args;
 	const params = {
 		TableName,
