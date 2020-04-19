@@ -25,19 +25,10 @@ export function getAccountsByItem(item_id: string) {
 	return null;
 }
 
-export function upsertAccount(args: plaid.Account) {
-	const { account_id, balances, mask, name, official_name, subtype, type } = args;
+export function upsertAccount(args: { account: plaid.Account }) {
 	const params = {
 		TableName,
-		Item: {
-			account_id,
-			balances,
-			mask,
-			name,
-			official_name,
-			subtype,
-			type,
-		},
+		Item: args.account,
 	};
 
 	return db.putItem(params);
